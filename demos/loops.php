@@ -25,4 +25,48 @@ foreach ($cars as $car_name => $properties) {
 echo "<hr />";
 }
 
+
+$staff_data = [
+  array(  "name" => "Sam",
+  "dept" => "IT",
+  "salary" => 23000),
+  array(  "name" => "Happiness",
+  "dept" => "IT",
+  "salary" => 23000),
+  array(  "name" => "Mary",
+  "dept" => "IT",
+  "salary" => 23000),
+  array(  "name" => "Tobi",
+  "dept" => "IT",
+  "salary" => 23000)
+];
+$total_salary = 0;
+foreach($staff_data as $staff => $record){
+    $total_salary += $record["salary"];
+    print_r($staff);
+}
+
+echo "Total Salary: " . $total_salary;
 ?>
+
+<table>
+    <tr><th>Name</th>
+    <th>Name</th>
+    <th>Name</th>
+</tr>
+
+<?php 
+foreach($staff_data as $key => $staff_member){
+ ?>
+ 
+ <tr>
+    <td> <?php echo $staff_member["name"]; ?> </td>
+    <td> <?php echo $staff_member["dept"]; ?> </td>
+    <td> <?php echo $staff_member["salary"]; ?> </td>
+ </tr>
+
+ <?php
+}
+?>
+
+</table>
