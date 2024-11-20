@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +12,6 @@
             <li><a href="">Home</a> </li>
             <li><a href="./login.php">Log In</a> </li>
             <li><a href="./signup.php">Sign Up</a> </li>
-            <li><a href="./list_transactions.php">Transactions</a> </li>
   
         </ul>
     </nav>
-    <h1>Welcome to Rransaction Reporter</h1>
-    <p>Monitor all your income and expenses and stay on top of your finances with ease</p>
-
-<?php include("./includes/footer.php"); ?>
