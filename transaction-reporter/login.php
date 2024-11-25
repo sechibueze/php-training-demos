@@ -1,23 +1,57 @@
+<?php 
+session_start();
+ require_once("./functions.php");
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Reporter</title>
-</head>
-<body>
-    <nav>
-        <h1>Transaction Reporter</h1>
-        <ul>
-            <li><a href="">Home</a> </li>
-            <li><a href="./login.php">Log In</a> </li>
-            <li><a href="./signup.php">Sign Up</a> </li>
+?>
+
+
+<?php 
+
+print_r($_SESSION);
+// Set initial values
+$email = '';
+$password = '';
+$errors = [];
+
+
+if (isset($_POST["login"])) {
+   $email = $_POST["email"];
+   $password = $_POST["password"];
+   
+    // @TODO: Validate input
+
+
+
+    // @TODO: Create a record in database
+
+    $user = ["username" => "Happiness Tobi", "email" => $email];
+    $_SESSION["current_user"] = $user;
+
+    redirect_to("./list_transactions.php");
   
-        </ul>
-    </nav>
-    <h1>Login to Rransaction Reporter</h1>
-    <p>Monitor all your income and expenses and stay on top of your finances with ease</p>
+}
+?>
 
+<?php include("./includes/header.php"); ?>
+
+    <h1>Welcome back </h1>
+ 
+    <form method="post" >
+<?php if (count($errors) > 0) {
+    foreach($errors as $key => $error){ ?>
+
+        <p> <?php echo $error; ?> </p>
+<?php
+    }
+} ?>
+
+        <label>Email</label>
+        <input name="email" value="" /> <br>
+
+        <label>Password</label>
+        <input name="password" type="password" value="" /> <br>
+
+        <button type="submit" name="login">Login</button>
+    </form>
 
 <?php include("./includes/footer.php"); ?>
