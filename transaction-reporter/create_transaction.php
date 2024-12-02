@@ -1,4 +1,9 @@
+<?php 
+require_once("./functions.php");
+require_once("./includes/database.php");
+require_login();
 
+?>
 
 
 <?php 
@@ -49,12 +54,22 @@ if (isset($_POST["send"])) {
             $errors[] = "Failed to upload files";
         }
 
+
+        // @TODO: Create a record in database
+        $owner_id = $_SESSION['current_user']['id'];
+        $query = "INSERT INTO transactions (title, narrative, amount, type, receipt, owner) ";
+        $query .= " VALUES ( ";
+        $query .= "'$title', '$note', $amount, '$type', '$receipt_url', $owner_id ";
+        $query .= " ) ";
+
+        $res = mysqli_query($conn, $query);
+        if($res){
+            redirect_to("./list_transactions.php");
+        }
+        $errors[] = "Failed to craete a new transx";
+
          
     }
-
-    // @TODO: Create a record in database
-
-    header("Location: list_transation.php");
 
   
 }

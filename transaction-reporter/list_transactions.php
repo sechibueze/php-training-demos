@@ -1,11 +1,10 @@
-<?php session_start(); 
+<?php 
 require_once("./functions.php");
 
+require_login();
 
 
-if (!isset($_SESSION["current_user"])) {
-   redirect_to("./login.php");
-}
+// List of transactions for the logged in user
 
 ?>
 

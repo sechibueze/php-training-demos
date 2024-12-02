@@ -12,7 +12,7 @@
         <ul>
             <li><a href="">Home</a> </li>
             <li><a href="./login.php">Log In</a> </li>
-            <li><a href="./signup.php">Sign Up</a> </li>
+            <li><a href="./register.php">Sign Up</a> </li>
             <li><a href="./list_transactions.php">Transactions</a> </li>
   
         </ul>

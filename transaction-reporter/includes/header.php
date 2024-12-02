@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction Reporter</title>
+    
 </head>
 <body>
     <nav>
@@ -11,7 +12,7 @@
         <ul>
             <li><a href="">Home</a> </li>
             <li><a href="./login.php">Log In</a> </li>
-            <li><a href="./signup.php">Sign Up</a> </li>
+            <li><a href="./register.php">Sign Up</a> </li>
             <li><a href="./logout.php">Log out</a> </li>
   
         </ul>
