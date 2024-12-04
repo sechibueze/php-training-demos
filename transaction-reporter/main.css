@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(207, 207, 214);
+}
+
+.btn {
+  padding: 0.5rem 0.85rem;
+  background-color: blueviolet;
+  color: black;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+}
